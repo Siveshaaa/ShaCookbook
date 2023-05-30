@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.shascookbook.fragments.ViewFullRecipe">
+    <item
+        android:id="@+id/menu_editRecipe"
+        android:icon="@drawable/vector_edit"
+        android:orderInCategory="100"
+        android:title="@string/edit_recipe"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_shareRecipe"
+        android:icon="@drawable/vector_share"
+        android:orderInCategory="150"
+        android:title="@string/share_recipe"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_deleteRecipe"
+        android:icon="@drawable/vector_delete"
+        android:orderInCategory="200"
+        android:title="@string/delete_recipe"
+        app:showAsAction="never" />
+</menu>

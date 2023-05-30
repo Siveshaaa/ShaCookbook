@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Sha\'s Cookbook</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+    </string>
+
+    <string name="category">CATEGORY</string>
+    <string name="todays_suggestion">TODAY\'S SUGGESTION</string>
+    <string name="view_all_recipes">VIEW ALL RECIPES</string>
+    <string name="manage_category">Manage Category</string>
+    <string name="edit_recipe">Edit Recipe</string>
+    <string name="delete_recipe">Delete Recipe</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="upload_image">UPLOAD IMAGE</string>
+    <string name="prep_time">Prep Time</string>
+    <string name="cook_time">Cook Time</string>
+    <string name="serving_size">Serving Size</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="video_link_optional">Video Link (Optional)</string>
+    <string name="cancel" tools:ignore="ButtonCase">CANCEL</string>
+    <string name="save">SAVE</string>
+    <string name="method">Method</string>
+    <string name="watch_video">WATCH VIDEO</string>
+    <string name="recipe_category">Recipe Category</string>
+    <string name="update">UPDATE</string>
+    <string name="share_recipe">Share Recipe</string>
+
+</resources>

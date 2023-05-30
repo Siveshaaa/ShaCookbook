@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "329777759718",
+    "project_id": "sha-s-cookbook",
+    "storage_bucket": "sha-s-cookbook.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:329777759718:android:a4862445eb1a33b29ec227",
+        "android_client_info": {
+          "package_name": "com.example.shascookbook"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYehifyluaBosgKjuIs5yhveChGazGa64"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

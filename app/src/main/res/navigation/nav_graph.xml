@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homepageFragment">
+    <fragment
+        android:id="@+id/homepageFragment"
+        android:name="com.example.shascookbook.fragments.HomepageFragment"
+        android:label="Sha's CookBook"
+        tools:layout="@layout/fragment_homepage">
+        <action
+            android:id="@+id/action_homepageFragment_to_recipeListFragment"
+            app:destination="@id/recipeListFragment"
+            app:popUpTo="@id/homepageFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_homepageFragment_to_addRecipeFragment"
+            app:destination="@id/addRecipeFragment"
+            app:popUpTo="@id/homepageFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_homepageFragment_to_fullRecipeFragment"
+            app:destination="@id/fullRecipeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recipeListFragment"
+        android:name="com.example.shascookbook.fragments.RecipeListFragment"
+        tools:layout="@layout/fragment_recipe_list">
+        <action
+            android:id="@+id/action_recipeListFragment_to_fullRecipeFragment"
+            app:destination="@id/fullRecipeFragment"
+            app:popUpTo="@id/recipeListFragment"
+            app:popUpToInclusive="false" />
+        <argument
+            android:name="cardType"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/addRecipeFragment"
+        android:name="com.example.shascookbook.fragments.AddRecipeFragment"
+        tools:layout="@layout/fragment_add_recipe">
+        <action
+            android:id="@+id/action_addRecipeFragment_to_homepageFragment"
+            app:destination="@id/homepageFragment"
+            app:popUpTo="@id/homepageFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/fullRecipeFragment"
+        android:name="com.example.shascookbook.fragments.FullRecipeFragment"
+        tools:layout="@layout/fragment_full_recipe">
+        <argument
+            android:name="selectedRecipe"
+            app:argType="com.example.shascookbook.model.Recipe" />
+        <action
+            android:id="@+id/action_fullRecipeFragment_to_updateRecipeFragment"
+            app:destination="@id/updateRecipeFragment"
+            app:popUpTo="@id/fullRecipeFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="cardType"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateRecipeFragment"
+        android:name="com.example.shascookbook.fragments.UpdateRecipeFragment"
+        android:label="Update Recipe"
+        tools:layout="@layout/fragment_update_recipe">
+        <argument
+            android:name="selectedRecipe"
+            app:argType="com.example.shascookbook.model.Recipe" />
+        <argument
+            android:name="cardType"
+            app:argType="string" />
+    </fragment>
+</navigation>
