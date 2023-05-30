@@ -11,7 +11,6 @@ import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.core.app.ShareCompat
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
@@ -53,11 +52,6 @@ class FullRecipeFragment : Fragment() {
                                 args.selectedRecipe, args.cardType
                             )
                         findNavController().navigate(action)
-                        return true
-                    }
-
-                    R.id.menu_shareRecipe -> {
-                        shareRecipe()
                         return true
                     }
 
@@ -112,30 +106,6 @@ class FullRecipeFragment : Fragment() {
         builder.setTitle("Delete Recipe?")
         builder.setMessage("Are you sure you want to delete ${args.selectedRecipe.name}?")
         builder.create().show()
-    }
-
-    @Suppress("DEPRECATION")
-    private fun shareRecipe() {
-        val link: String = args.selectedRecipe.link.ifEmpty {
-            "Unavailable"
-        }
-        val lineBreaker = "\n"
-        val doubleLineBreaker = "\n\n"
-        val recipeText: String = "Recipe: ${args.selectedRecipe.name}${lineBreaker}" +
-                "Category: ${args.selectedRecipe.category}${lineBreaker}" +
-                "Prep Time: ${args.selectedRecipe.prepTime}${lineBreaker}" +
-                "Cook Time: ${args.selectedRecipe.cookTime}${lineBreaker}" +
-                "Serving Size: ${args.selectedRecipe.servingSize}${doubleLineBreaker}" +
-                "Ingredients:${lineBreaker}${args.selectedRecipe.ingredients}${doubleLineBreaker}" +
-                "Method:${lineBreaker}${args.selectedRecipe.method}${doubleLineBreaker}" +
-                "Link: $link"
-        val mimeType = "text/plain"
-        ShareCompat.IntentBuilder
-            .from(requireActivity())
-            .setType(mimeType)
-            .setChooserTitle("Share recipe with:")
-            .setText(recipeText)
-            .startChooser()
     }
 
 }
